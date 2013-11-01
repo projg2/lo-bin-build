@@ -1,0 +1,24 @@
+# WARNING: Changing your CHOST is not something that should be done lightly.
+# Please consult http://www.gentoo.org/doc/en/change-chost.xml before changing.
+CHOST="x86_64-pc-linux-gnu"
+
+USE="bindist"
+
+PORTDIR="/usr/portage"
+DISTDIR="${PORTDIR}/distfiles"
+PKGDIR="/root/packages"
+
+PORTAGE_NICENESS="5"
+MAKEOPTS="-j6"
+
+CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
+CXXFLAGS="${CFLAGS}"
+
+FEATURES="sandbox distlocks strict userfetch userpriv usersandbox splitdebug protect-owned compressdebug -news"
+
+VIDEO_CARDS="vesa"
+INPUT_DEVICES="keyboard mouse evdev"
+LINGUAS="de en"
+
+EMERGE_DEFAULT_OPTS="-v --keep-going"
+
