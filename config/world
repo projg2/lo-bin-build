@@ -6,5 +6,6 @@ app-misc/mmv
 app-portage/eix
 app-portage/gentoolkit
 dev-lang/python
+dev-python/whirlpool
 dev-vcs/git
 sys-apps/less
