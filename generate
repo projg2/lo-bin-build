@@ -155,7 +155,7 @@ for package in bin debug ; do
 
  for suffix in java kde kde-java gnome gnome-java ; do 
 
-  bsdiff ${ARCH}-${package}-libreoffice-${BINVERSION}.tar ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.patch
+  xdelta3 ${ARCH}-${package}-libreoffice-${BINVERSION}.tar ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar > $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.patch
   xz -9 ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.patch
  # rm ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar
 
