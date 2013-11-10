@@ -76,13 +76,13 @@ echo "Base"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_NG} ${IUSES_NK}" > ${USEFILE}
 emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-base-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "Base - java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_NK}" > ${USEFILE}
 emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-base-java-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
 # kde flavor
 echo "KDE"
@@ -128,11 +128,11 @@ for name in ./libreoffice-*-${BINVERSION}.tbz2 ; do
   mv -v usr/lib/debug ../p2/usr/lib/
 
   echo "Re-packing program"
-  tar cfvJ ../../$ARCH-bin-$BN.tar.xz --owner root --group root ./*
+  tar cfv ../../$ARCH-bin-$BN.tar --owner root --group root ./*
 
   echo "Re-packing debug info"
   cd ../p2
-  tar cfvJ ../../$ARCH-debug-$BN.tar.xz --owner root --group root ./*
+  tar cfv ../../$ARCH-debug-$BN.tar --owner root --group root ./*
 
   echo "Removing unpacked files"
   cd ../..
@@ -141,11 +141,27 @@ for name in ./libreoffice-*-${BINVERSION}.tbz2 ; do
   echo "Removing original package file"
   rm -f $BN.tbz2
 
-  echo "Moving results to distfiles storage"
-  mv -v $ARCH-bin-$BN.tar.xz $MYDISTDIR
-  mv -v $ARCH-debug-$BN.tar.xz $MYDISTDIR
+#  echo "Moving results to distfiles storage"
+#  mv -v $ARCH-bin-$BN.tar.xz $MYDISTDIR
+#  mv -v $ARCH-debug-$BN.tar.xz $MYDISTDIR
 
   echo "Done with $BN.tbz2"
+
+done
+
+cd ${MYTMPDIR}
+
+for package in bin debug ; do
+
+ for suffix in java kde kde-java gnome gnome-java ; do 
+
+  bsdiff ${ARCH}-${package}-libreoffice-${BINVERSION}.tar ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.patch
+  xz -9 ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.patch
+ # rm ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar
+
+ done
+
+ xz -9 ${ARCH}-${package}-libreoffice-${BINVERSION}.tar
 
 done
 
