@@ -18,7 +18,6 @@ FEATURES="sandbox distlocks strict userfetch userpriv usersandbox splitdebug pro
 
 VIDEO_CARDS="vesa"
 INPUT_DEVICES="keyboard mouse evdev"
-LINGUAS="de en"
 
 EMERGE_DEFAULT_OPTS="-v --keep-going"
 
