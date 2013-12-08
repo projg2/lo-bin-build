@@ -1,0 +1,29 @@
+#!/bin/bash
+
+[[ generate == $1 ]] || [[ cleanup == $1 ]] || {
+  echo "Invalid command"
+  exit
+}
+
+NOW=`date -u "+%F_%T"`
+HERE=/root/lo-bin-build
+LOCK=$HERE/log/$1.lock
+LOG=$HERE/log/$NOW-$1.log
+
+if [ -f $LOCK ] ; then 
+
+  echo "Lock file $LOCK exists, not doing anything."
+
+else
+
+  echo Running $HERE/$1 in background with log in $LOG
+  (
+    (
+      touch $LOCK
+      $HERE/$1
+      rm -f $LOCK
+  
+    ) &> $LOG
+    xz $LOG
+  ) &
+fi
