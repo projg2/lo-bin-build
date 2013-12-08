@@ -9,8 +9,8 @@ EAPI=5
 KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
 
-BASE_AMD64_URI="mirror://gentoo/amd64-bin-"
-BASE_X86_URI="mirror://gentoo/x86-bin-"
+BASE_AMD64_URI="http://packages.gentooexperimental.org/packages/amd64-libreoffice/amd64-bin-"
+BASE_X86_URI="http://packages.gentooexperimental.org/packages/x86-libreoffice/x86-bin-"
 
 PYTHON_COMPAT=( python2_7 python3_3 )
 PYTHON_REQ_USE="threads,xml"
