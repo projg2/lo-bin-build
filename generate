@@ -141,10 +141,6 @@ for name in ./libreoffice-*-${BINVERSION}.tbz2 ; do
   echo "Removing original package file"
   rm -f $BN.tbz2
 
-#  echo "Moving results to distfiles storage"
-#  mv -v $ARCH-bin-$BN.tar.xz $MYDISTDIR
-#  mv -v $ARCH-debug-$BN.tar.xz $MYDISTDIR
-
   echo "Done with $BN.tbz2"
 
 done
@@ -155,15 +151,17 @@ for package in bin debug ; do
 
  for suffix in java kde kde-java gnome gnome-java ; do 
 
-  xdelta3 ${ARCH}-${package}-libreoffice-${BINVERSION}.tar ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar > $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.patch
-  xz -9 ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.patch
- # rm ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar
+  echo "Generating binary diffs"
+  xdelta3 ${ARCH}-${package}-libreoffice-${BINVERSION}.tar ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar > $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.xd3
+# rm ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar
+  mv -v $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.xd3 $MYDISTDIR
 
  done
 
+ echo "Compressing base package"
  xz -9 ${ARCH}-${package}-libreoffice-${BINVERSION}.tar
+ mv -v ${ARCH}-${package}-libreoffice-${BINVERSION}.tar.xz $MYDISTDIR
 
 done
 
 rm -f ${USEFILE} || die "Removing ${USEFILE} failed"
-
