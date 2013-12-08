@@ -7,7 +7,7 @@
 
 NOW=`date -u "+%F_%T"`
 HERE=/root/lo-bin-build
-LOCK=$HERE/log/$1.lock
+LOCK=$HERE/log/job.lock
 LOG=$HERE/log/$NOW-$1.log
 
 if [ -f $LOCK ] ; then 
