@@ -8,6 +8,7 @@ Installation:
 * Clone this repository as /root/lo-bin-build
 * remove /etc/portage/make.conf and symlink /root/lo-bin-build/config/make.conf.${ARCH} there
 * symlink /root/lo-bin-build/config/keywords to /etc/portage/package.keywords/automatic
+* symlink /root/lo-bin-build/config/useflags to /etc/portage/package.use/automatic
 
 You should be able to figure out the rest for yourself.
 
