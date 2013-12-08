@@ -11,7 +11,7 @@ PKGDIR="/root/packages"
 PORTAGE_NICENESS="5"
 MAKEOPTS="-j6"
 
-CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
+CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g1"
 CXXFLAGS="${CFLAGS}"
 
 FEATURES="sandbox distlocks strict userfetch userpriv usersandbox splitdebug protect-owned compressdebug -news"
