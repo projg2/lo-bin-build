@@ -112,7 +112,7 @@ mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-gn
 
 cd ${MYTMPDIR}
 
-for name in ./libreoffice-*-${BINVERSION}.tbz2 ; do
+for name in ./libreoffice*-${BINVERSION}.tbz2 ; do
 
   BN=`basename $name .tbz2`
 
