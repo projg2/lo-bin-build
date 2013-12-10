@@ -152,7 +152,7 @@ for package in bin debug ; do
  for suffix in java kde kde-java gnome gnome-java ; do 
 
   echo "Generating binary diffs"
-  xdelta3 ${ARCH}-${package}-libreoffice-${BINVERSION}.tar ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar > $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.xd3
+  xdelta3 -s ${ARCH}-${package}-libreoffice-${BINVERSION}.tar ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.xd3
 # rm ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar
   mv -v $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.xd3 $MYDISTDIR
 
