@@ -168,9 +168,23 @@ pkg_setup() {
 }
 
 src_unpack() {
-	echo $A
-#	xdelta3 -d 
-#	default
+	cp "${DISTDIR}/${ARCH}-bin-${PN/-bin}-${PVR}.tar.xz" "${WORKDIR}/" || die
+	elog "Uncompressing distfile ${ARCH}-bin-${PN/-bin}-${PVR}.tar.xz"
+	unxz "${WORKDIR}/${ARCH}-bin-${PN/-bin}-${PVR}.tar.xz"
+
+	local patchname
+	use kde && patchname="-kde"
+	use gnome && patchname="-gnome"
+	use java && patchname="${patchname}-java"
+
+	if [ -n "${patchname}" ]; then
+		elog "Patching distfile ${ARCH}-bin-${PN/-bin}-${PVR}.tar using ${ARCH}-bin-${PN/-bin}${patchname}-${PVR}.xd3"
+		xdelta3 -d -s "${WORKDIR}/${ARCH}-bin-${PN/-bin}-${PVR}.tar" "${DISTDIR}/${ARCH}-bin-${PN/-bin}${patchname}-${PVR}.xd3" "${WORKDIR}/tmpdist.tar" || die
+		mv "${WORKDIR}/tmpdist.tar" "${WORKDIR}/${ARCH}-bin-${PN/-bin}-${PVR}.tar"
+	fi
+
+	elog "Unpacking new ${ARCH}-bin-${PN/-bin}-${PVR}.tar"
+	unpack "./${ARCH}-bin-${PN/-bin}-${PVR}.tar"
 }
 
 src_prepare() {
