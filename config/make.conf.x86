@@ -6,7 +6,7 @@ USE="bindist"
 
 PORTDIR="/usr/portage"
 DISTDIR="${PORTDIR}/distfiles"
-PKGDIR="/root/packages"
+PKGDIR="/root/lo-bin-build/packages"
 
 PORTAGE_NICENESS="5"
 MAKEOPTS="-j6"
