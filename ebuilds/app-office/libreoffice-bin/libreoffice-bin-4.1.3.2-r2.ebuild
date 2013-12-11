@@ -51,7 +51,7 @@ SRC_URI="
 	x86? ( ${SRC_URI_X86} )
 "
 
-IUSE="debug gnome java kde"
+IUSE="gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
