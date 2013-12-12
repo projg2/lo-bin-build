@@ -7,8 +7,9 @@ EAPI=5
 KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
 
-BASE_AMD64_URI="http://packages.gentooexperimental.org/packages/amd64-libreoffice/amd64-bin-"
-BASE_X86_URI="http://packages.gentooexperimental.org/packages/x86-libreoffice/x86-bin-"
+BASE_PACKAGENAME="bin"
+BASE_AMD64_URI="http://packages.gentooexperimental.org/packages/amd64-libreoffice/amd64-${BASE_PACKAGENAME}-"
+BASE_X86_URI="http://packages.gentooexperimental.org/packages/x86-libreoffice/x86-${BASE_PACKAGENAME}-"
 
 PYTHON_COMPAT=( python2_7 python3_3 )
 PYTHON_REQ_USE="threads,xml"
@@ -64,8 +65,8 @@ BIN_COMMON_DEPEND="
 	=media-gfx/graphite2-1.2*
 	=media-libs/harfbuzz-0.9.23[icu]
 	=media-libs/libpng-1.5*
-	>=sys-libs/glibc-2.15-r3
-	kde? ( >=kde-base/kdelibs-4.10.5-r1:4 >=dev-qt/qtcore-4.8.4-r5:4 )
+	>=sys-libs/glibc-2.16.0
+	kde? ( >=kde-base/kdelibs-4.11.2-r1:4 >=dev-qt/qtcore-4.8.5:4 )
 	|| ( <media-libs/libjpeg-turbo-1.3.0-r2 =media-libs/jpeg-8* )
 "
 
@@ -168,9 +169,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	cp "${DISTDIR}/${ARCH}-bin-${PN/-bin}-${PVR}.tar.xz" "${WORKDIR}/" || die
-	elog "Uncompressing distfile ${ARCH}-bin-${PN/-bin}-${PVR}.tar.xz"
-	unxz "${WORKDIR}/${ARCH}-bin-${PN/-bin}-${PVR}.tar.xz"
+	elog "Uncompressing distfile ${ARCH}-${BASE_PACKAGENAME}-${PN/-bin}-${PVR}.tar.xz"
+	xz -cd "${DISTDIR}/${ARCH}-${BASE_PACKAGENAME}-${PN/-bin}-${PVR}.tar.xz" > "${WORKDIR}/${ARCH}-${BASE_PACKAGENAME}-${PN/-bin}-${PVR}.tar" || die
 
 	local patchname
 	use kde && patchname="-kde"
@@ -178,13 +178,13 @@ src_unpack() {
 	use java && patchname="${patchname}-java"
 
 	if [ -n "${patchname}" ]; then
-		elog "Patching distfile ${ARCH}-bin-${PN/-bin}-${PVR}.tar using ${ARCH}-bin-${PN/-bin}${patchname}-${PVR}.xd3"
-		xdelta3 -d -s "${WORKDIR}/${ARCH}-bin-${PN/-bin}-${PVR}.tar" "${DISTDIR}/${ARCH}-bin-${PN/-bin}${patchname}-${PVR}.xd3" "${WORKDIR}/tmpdist.tar" || die
-		mv "${WORKDIR}/tmpdist.tar" "${WORKDIR}/${ARCH}-bin-${PN/-bin}-${PVR}.tar"
+		elog "Patching distfile ${ARCH}-${BASE_PACKAGENAME}-${PN/-bin}-${PVR}.tar using ${ARCH}-${BASE_PACKAGENAME}-${PN/-bin}${patchname}-${PVR}.xd3"
+		xdelta3 -d -s "${WORKDIR}/${ARCH}-${BASE_PACKAGENAME}-${PN/-bin}-${PVR}.tar" "${DISTDIR}/${ARCH}-${BASE_PACKAGENAME}-${PN/-bin}${patchname}-${PVR}.xd3" "${WORKDIR}/tmpdist.tar" || die
+		mv "${WORKDIR}/tmpdist.tar" "${WORKDIR}/${ARCH}-${BASE_PACKAGENAME}-${PN/-bin}-${PVR}.tar" || die
 	fi
 
-	elog "Unpacking new ${ARCH}-bin-${PN/-bin}-${PVR}.tar"
-	unpack "./${ARCH}-bin-${PN/-bin}-${PVR}.tar"
+	elog "Unpacking new ${ARCH}-${BASE_PACKAGENAME}-${PN/-bin}-${PVR}.tar"
+	unpack "./${ARCH}-${BASE_PACKAGENAME}-${PN/-bin}-${PVR}.tar"
 }
 
 src_prepare() {
