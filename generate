@@ -153,7 +153,7 @@ for package in bin debug ; do
 
   echo "Generating binary diffs"
   xdelta3 -s ${ARCH}-${package}-libreoffice-${BINVERSION}.tar ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.xd3
-# rm ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar
+  rm ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar
   mv -v $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.xd3 $MYDISTDIR
 
  done
