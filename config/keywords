@@ -5,3 +5,6 @@ dev-python/whirlpool
 
 # bug 496770
 =app-text/poppler-0.24.5
+
+# bug 494962
+=media-libs/libpng-1.6.8
