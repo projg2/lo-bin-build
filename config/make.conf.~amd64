@@ -1,0 +1,10 @@
+# WARNING: Changing your CHOST is not something that should be done lightly.
+# Please consult http://www.gentoo.org/doc/en/change-chost.xml before changing.
+CHOST="x86_64-pc-linux-gnu"
+
+CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
+CXXFLAGS="${CFLAGS}"
+
+ACCEPT_KEYWORDS="amd64 ~amd64"
+
+source /root/lo-bin-build/config/make.conf.common
