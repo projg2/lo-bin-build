@@ -1,19 +1,17 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 
 import hashlib
 from sys import argv
 from hashlib import sha256, sha512
 from os.path import basename, getsize
-import whirlpool
-
-def wp(s):
-	return whirlpool.new(s)
 
 def distline(file):
-	f = open(file)
+	f = open(file, "br")
 	s = f.read()
 	f.close()
-	return "DIST %s %s SHA256 %s SHA512 %s WHIRLPOOL %s" % (basename(file), getsize(file), sha256(s).hexdigest(), sha512(s).hexdigest(), wp(s).hexdigest())
+	wp = hashlib.new("whirlpool")
+	wp.update(s)
+	return "DIST %s %s SHA256 %s SHA512 %s WHIRLPOOL %s" % (basename(file), getsize(file), sha256(s).hexdigest(), sha512(s).hexdigest(), wp.hexdigest())
 
 for arg in argv[1:]:
-	print distline(arg)
+	print (distline(arg))
