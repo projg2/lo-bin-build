@@ -1,0 +1,15 @@
+USE="bindist"
+
+PORTDIR="/usr/portage"
+DISTDIR="${PORTDIR}/distfiles"
+PKGDIR="/root/lo-bin-build/packages"
+
+PORTAGE_NICENESS="5"
+MAKEOPTS="-j6"
+
+FEATURES="sandbox distlocks strict userfetch userpriv usersandbox splitdebug protect-owned compressdebug -news"
+
+VIDEO_CARDS="vesa"
+INPUT_DEVICES="keyboard mouse evdev"
+
+EMERGE_DEFAULT_OPTS="-v --keep-going"
