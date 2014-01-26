@@ -1,5 +1,6 @@
 #!/bin/bash
 
+emerge --sync
 cp /root/lo-bin-build/config/world /var/lib/portage/world
 emerge -uDNv world
 emerge --depclean
