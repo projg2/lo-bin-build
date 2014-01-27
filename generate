@@ -165,3 +165,6 @@ for package in bin debug ; do
 done
 
 rm -f ${USEFILE} || die "Removing ${USEFILE} failed"
+
+cd ${MYDISTDIR}
+${BASEDIR}/manifest ${ARCH}-* > Manifest-${ARCH}.txt
