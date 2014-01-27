@@ -59,15 +59,15 @@ KEYWORDS="-* ~amd64 ~x86"
 
 BIN_COMMON_DEPEND="
 	=app-text/libexttextcat-3.4*
-	app-text/poppler:0/43
+	app-text/poppler:0/44
 	dev-libs/boost:0/1.52
 	dev-libs/icu:0/51.2
 	=media-gfx/graphite2-1.2*
 	=media-libs/harfbuzz-0.9.23[icu]
-	=media-libs/libpng-1.5*
-	>=sys-libs/glibc-2.16.0
-	kde? ( >=kde-base/kdelibs-4.11.2-r1:4 >=dev-qt/qtcore-4.8.5:4 )
-	|| ( <media-libs/libjpeg-turbo-1.3.0-r2 =media-libs/jpeg-8* )
+	media-libs/libpng:0/16
+	>=sys-libs/glibc-2.17
+	virtual/jpeg:62
+	kde? ( >=kde-base/kdelibs-4.11.2-r1:4 >=dev-qt/qtcore-4.8.5-r1:4 )
 "
 
 # PLEASE place any restrictions that are specific to the binary builds
