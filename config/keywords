@@ -1,5 +1,8 @@
 # specific stuff
 
 # bin is faster than source
-=app-office/libreoffice-4.1.4.2
-=app-office/libreoffice-l10n-4.1.4.2
+=app-office/libreoffice-4.2.3.3-r1
+=app-office/libreoffice-l10n-4.2.3.3
+
+# icu
+=dev-libs/icu-52.1
