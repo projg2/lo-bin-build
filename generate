@@ -39,9 +39,9 @@ else
 fi
 
 # first the default subset of useflags
-IUSES_BASE="bash-completion branding cups dbus gstreamer gtk opengl vba webdav -aqua -binfilter -bluetooth -debug -gtk3 -jemalloc -mysql -odk -postgres -telepathy"
+IUSES_BASE="bash-completion branding cups dbus gstreamer gtk opengl vba webdav -aqua -binfilter -bluetooth -debug -firebird -gtk3 -jemalloc -mysql -odk -postgres -telepathy -vlc"
 
-ENABLE_EXTENSIONS="presenter-console presenter-minimizer"
+ENABLE_EXTENSIONS="presenter-console"
 DISABLE_EXTENSIONS="nlpsolver pdfimport scripting-beanshell scripting-javascript wiki-publisher"
 
 for lo_xt in ${ENABLE_EXTENSIONS}; do
