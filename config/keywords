@@ -1,8 +1,8 @@
 # specific stuff
 
 # bin is faster than source
-=app-office/libreoffice-4.2.3.3-r1
-=app-office/libreoffice-l10n-4.2.3.3
+=app-office/libreoffice-4.2.5.2
+=app-office/libreoffice-l10n-4.2.5.2
 
 =dev-cpp/libcmis-0.4.1
 =media-libs/libfreehand-0.0.0
