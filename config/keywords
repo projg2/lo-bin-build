@@ -1,5 +1,9 @@
 # specific stuff
 
+# prepare for new poppler and new icu
+=app-text/poppler-0.26.4
+=dev-libs/icu-53.1
+
 # bin is faster than source
 =app-office/libreoffice-4.2.6.3
 =app-office/libreoffice-l10n-4.2.6.3
