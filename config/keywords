@@ -1,8 +1,10 @@
 # specific stuff
 
-# prepare for new poppler and new icu
-=app-text/poppler-0.26.4
+# prepare for new poppler, new icu, and new boost
+=app-text/poppler-0.26.5
 =dev-libs/icu-53.1
+=dev-util/boost-build-1.55.0
+=dev-libs/boost-1.55.0-r2
 
 # bin is faster than source
 =app-office/libreoffice-4.2.6.3
