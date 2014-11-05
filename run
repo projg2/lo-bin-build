@@ -24,6 +24,6 @@ else
       rm -f $LOCK
   
     ) &> $LOG
-    xz $LOG
+    bzip2 $LOG
   ) &
 fi
