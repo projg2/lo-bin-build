@@ -4,8 +4,8 @@ PORTDIR="/usr/portage"
 DISTDIR="${PORTDIR}/distfiles"
 PKGDIR="/root/lo-bin-build/packages"
 
-PORTAGE_NICENESS="3"
-MAKEOPTS="-j6"
+PORTAGE_NICENESS="6"
+MAKEOPTS="-j5"
 
 FEATURES="sandbox distlocks strict userfetch userpriv usersandbox splitdebug protect-owned compressdebug -news"
 
