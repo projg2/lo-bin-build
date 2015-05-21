@@ -1,11 +1,4 @@
 # specific stuff
 
-# prepare for new poppler
-=app-text/poppler-0.32.0
-
-# bin is faster than source
-=app-office/libreoffice-4.4.1.2
-=app-office/libreoffice-l10n-4.4.1.2
-=dev-cpp/libcmis-0.5.0
-=media-libs/libpagemaker-0.0.2
-=media-libs/opencollada-1.2.2_p20150207
+# prepare for new icu
+=dev-libs/icu-55.1
