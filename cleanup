@@ -2,8 +2,8 @@
 
 emerge --sync
 cp /root/lo-bin-build/config/world /var/lib/portage/world
-emerge -uDNv world
+emerge -uDNv --with-bdeps=y world
 emerge --depclean
 emerge @preserved-rebuild
 revdep-rebuild
-emerge -uDNv world
+emerge -uDNv --with-bdeps=y world
