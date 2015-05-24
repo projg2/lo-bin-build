@@ -7,3 +7,4 @@ emerge --depclean
 emerge @preserved-rebuild
 revdep-rebuild
 emerge -uDNv --with-bdeps=y world
+eix-update
