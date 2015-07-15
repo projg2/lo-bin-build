@@ -1,12 +1,2 @@
 # specific stuff
 
-# prepare for new icu
-=dev-libs/icu-55.1
-
-# bin before source
-=app-office/libreoffice-4.4.3.2
-=app-office/libreoffice-l10n-4.4.3.2
-=dev-util/mdds-0.12.0
-=dev-libs/libixion-0.9.0
-=dev-libs/liborcus-0.7.1
-
