@@ -9,6 +9,7 @@ Installation:
 * remove /etc/portage/make.conf and symlink /root/lo-bin-build/config/make.conf.${ARCH} there
 * symlink /root/lo-bin-build/config/keywords to /etc/portage/package.keywords/automatic
 * symlink /root/lo-bin-build/config/useflags to /etc/portage/package.use/automatic
+* symlink /root/lo-bin-build/config/environment to /etc/portage/package.env/automatic
+* symlink /root/lo-bin-build/config/env to /etc/portage/env
 
 You should be able to figure out the rest for yourself.
-
