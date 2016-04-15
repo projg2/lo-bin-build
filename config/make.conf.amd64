@@ -2,7 +2,7 @@
 # Please consult http://www.gentoo.org/doc/en/change-chost.xml before changing.
 CHOST="x86_64-pc-linux-gnu"
 
-CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe"
+CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
 CXXFLAGS="${CFLAGS}"
 
 source /root/lo-bin-build/config/make.conf.common
