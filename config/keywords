@@ -2,5 +2,7 @@
 =app-office/libreoffice-5.1.2.2
 =app-office/libreoffice-l10n-5.1.2.2
 
+=dev-libs/liborcus-0.9.2-r1
+
 =app-text/poppler-0.42.0
 =dev-libs/icu-57.1
