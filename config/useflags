@@ -3,3 +3,4 @@ sys-libs/zlib minizip
 app-crypt/pinentry gnome-keyring
 kde-base/kdelibs -handbook
 kde-base/katepart -handbook
+dev-libs/libpcre pcre16
