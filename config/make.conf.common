@@ -5,7 +5,7 @@ DISTDIR="${PORTDIR}/distfiles"
 PKGDIR="/root/lo-bin-build/packages"
 
 PORTAGE_NICENESS="10"
-MAKEOPTS="-j3"
+MAKEOPTS="-j6"
 
 FEATURES="sandbox distlocks strict userfetch userpriv usersandbox splitdebug protect-owned compressdebug -news"
 
