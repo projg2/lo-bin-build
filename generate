@@ -39,7 +39,7 @@ else
 fi
 
 # first the default subset of useflags
-IUSES_BASE="bash-completion branding cups dbus gstreamer gtk -aqua -binfilter -bluetooth -collada -debug -firebird -gtk3 -jemalloc -libressl -mysql -odk -postgres -telepathy -vlc"
+IUSES_BASE="bash-completion branding cups dbus gstreamer -aqua -binfilter -bluetooth -collada -debug -firebird -gtk3 -jemalloc -libressl -mysql -odk -postgres -telepathy -vlc"
 
 ENABLE_EXTENSIONS="presenter-console"
 DISABLE_EXTENSIONS="nlpsolver pdfimport scripting-beanshell scripting-javascript wiki-publisher"
@@ -55,8 +55,8 @@ unset lo_xt
 # now for the options
 IUSES_J="java libreoffice_extensions_nlpsolver"
 IUSES_NJ="-java"
-IUSES_G="gnome eds"
-IUSES_NG="-gnome -eds"
+IUSES_G="gnome eds gtk"
+IUSES_NG="-gnome -eds -gtk"
 IUSES_K="kde"
 IUSES_NK="-kde"
 
