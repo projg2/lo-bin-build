@@ -1,15 +1,4 @@
 # stabilization
 
-=app-text/libetonyek-0.1.6
-=app-text/liblangtag-0.6.2
-=app-text/libmwaw-0.3.8
-=app-text/libwps-0.4.4-r1
-=dev-cpp/libcmis-0.5.2_pre20160820
-=dev-libs/libixion-0.11.1
-=dev-libs/liborcus-0.11.2
-=dev-util/mdds-1.2.2
-
-=app-office/libreoffice-5.2.3.3
-=app-office/libreoffice-l10n-5.2.3.3
-
-=dev-libs/icu-58.1-r1
+=dev-libs/boost-1.62.0-r1
+=dev-util/boost-build-1.62.0-r1
