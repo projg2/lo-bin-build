@@ -2,3 +2,8 @@
 
 =app-office/libreoffice-5.2.6.2
 =app-office/libreoffice-l10n-5.2.6.2
+
+# stabilization of deps
+
+=media-libs/glew-1.13.0
+=app-text/hunspell-1.6.1-r1
