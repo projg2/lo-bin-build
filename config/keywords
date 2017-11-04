@@ -1,5 +1,9 @@
 # stabilization
 
-# stabilization of deps
+=app-office/libreoffice-5.4.2.2
+=app-office/libreoffice-l10n-5.4.2.2
+=app-text/libstaroffice-0.0.4
+=dev-libs/liborcus-0.12.1
+=media-libs/libzmf-0.0.2
 
-=dev-libs/icu-58.2-r1
+# stabilization of deps
