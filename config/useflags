@@ -1,7 +1,7 @@
 media-libs/harfbuzz icu
 sys-libs/zlib minizip
 app-crypt/pinentry gnome-keyring
-kde-frameworks/kdelibs -handbook -policykit
+kde-frameworks/kdelibs -handbook -policykit -opengl
 kde-apps/katepart -handbook
 dev-libs/libpcre pcre16
 dev-libs/xmlsec nss
