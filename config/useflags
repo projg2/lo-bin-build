@@ -9,3 +9,4 @@ media-libs/gst-plugins-bad egl
 dev-lang/python sqlite
 dev-libs/openssl -bindist
 net-misc/openssh -bindist
+sys-devel/llvm -doc
