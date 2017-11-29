@@ -1,11 +1,3 @@
 # stabilization
 
-=app-office/libreoffice-5.4.2.2
-=app-office/libreoffice-l10n-5.4.2.2
-=app-text/libstaroffice-0.0.4
-=dev-libs/liborcus-0.12.1
-=dev-libs/libixion-0.12.2
-=media-libs/libzmf-0.0.2
-=dev-util/cppunit-1.14.0
-
 # stabilization of deps
