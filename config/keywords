@@ -6,3 +6,5 @@
 
 # bug 629244
 =media-libs/mesa-17.1.8
+# bug 619126
+=sys-block/thin-provisioning-tools-0.7.0
