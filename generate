@@ -5,8 +5,8 @@
 #  * for amd64: CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
 
 # What you can set:
-VERSION="5.4.2.2"
-BINVERSION="5.4.2.2-r1"
+VERSION="5.4.4.2"
+BINVERSION="5.4.4.2"
 
 ################################################
 
@@ -55,8 +55,8 @@ unset lo_xt
 # now for the options
 IUSES_J="java libreoffice_extensions_nlpsolver"
 IUSES_NJ="-java"
-IUSES_G="gnome eds gtk3"
-IUSES_NG="-gnome -eds -gtk3"
+IUSES_G="eds gtk3"
+IUSES_NG="-eds -gtk3"
 IUSES_K="kde"
 IUSES_NK="-kde"
 
