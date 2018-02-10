@@ -1,12 +1,8 @@
 # stabilization
 
-=app-office/libreoffice-5.4.4.2
-=app-office/libreoffice-l10n-5.4.4.2
+=app-office/libreoffice-5.4.5.1
+=app-office/libreoffice-l10n-5.4.5.1
 
 # stabilization of deps
-
-=dev-libs/boost-1.65.0
-=dev-util/boost-build-1.65.0
-=dev-libs/icu-60.2
 
 # making sure amd64 and x86 are equal
