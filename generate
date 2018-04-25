@@ -5,8 +5,8 @@
 #  * for amd64: CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
 
 # What you can set:
-VERSION="5.4.5.1"
-BINVERSION="5.4.5.1"
+VERSION="6.0.3.2"
+BINVERSION="6.0.3.2"
 
 ################################################
 
@@ -39,10 +39,10 @@ else
 fi
 
 # first the default subset of useflags
-IUSES_BASE="bash-completion branding cups dbus googledrive gstreamer gtk -aqua -binfilter -bluetooth -collada -debug -firebird -jemalloc -libressl -mysql -odk -pdfimport -postgres -quickstarter -vlc"
+IUSES_BASE="branding cups dbus googledrive gstreamer gtk2 -aqua -binfilter -bluetooth -coinmp -debug -firebird -gltf -gtk -jemalloc -libressl -mysql -odk -pdfimport -postgres -vlc"
 
 ENABLE_EXTENSIONS="presenter-console"
-DISABLE_EXTENSIONS="nlpsolver pdfimport scripting-beanshell scripting-javascript wiki-publisher"
+DISABLE_EXTENSIONS="nlpsolver scripting-beanshell scripting-javascript wiki-publisher"
 
 for lo_xt in ${ENABLE_EXTENSIONS}; do
         IUSES_BASE+=" libreoffice_extensions_${lo_xt}"
@@ -55,9 +55,9 @@ unset lo_xt
 # now for the options
 IUSES_J="java libreoffice_extensions_nlpsolver"
 IUSES_NJ="-java"
-IUSES_G="eds gtk3"
-IUSES_NG="-eds -gtk3"
-IUSES_K="kde"
+IUSES_G="eds gtk"
+IUSES_NG="-eds -gtk"
+IUSES_K="kde gtk"
 IUSES_NK="-kde"
 
 if [ -f /etc/portage/package.use ] ; then

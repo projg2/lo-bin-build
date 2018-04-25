@@ -1,8 +1,14 @@
 # stabilization
 
-=app-office/libreoffice-5.4.5.1
-=app-office/libreoffice-l10n-5.4.5.1
+=app-office/libreoffice-6.0.3.2
+=app-office/libreoffice-l10n-6.0.3.2
 
 # stabilization of deps
 
-# making sure amd64 and x86 are equal
+=app-text/libabw-0.1.2
+=app-text/libepubgen-0.1.0
+=app-text/libmspub-0.1.4
+=app-text/libqxp-0.0.1
+=dev-libs/libixion-0.13.0
+=dev-libs/liborcus-0.13.4
+
