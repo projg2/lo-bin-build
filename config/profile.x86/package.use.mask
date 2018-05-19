@@ -1,0 +1,2 @@
+# doesnt build on x86
+app-office/libreoffice kde
