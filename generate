@@ -5,8 +5,8 @@
 #  * for amd64: CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
 
 # What you can set:
-VERSION="6.0.3.2"
-BINVERSION="6.0.3.2"
+VERSION="6.0.6.2"
+BINVERSION="6.0.6.2"
 
 ################################################
 
@@ -39,7 +39,7 @@ else
 fi
 
 # first the default subset of useflags
-IUSES_BASE="branding cups dbus googledrive gstreamer gtk2 -aqua -binfilter -bluetooth -coinmp -debug -firebird -gltf -gtk -jemalloc -libressl -mysql -odk -pdfimport -postgres -vlc"
+IUSES_BASE="branding cups dbus googledrive gstreamer gtk2 -aqua -binfilter -bluetooth -coinmp -debug -firebird -gltf -gtk -jemalloc -mysql -odk -pdfimport -postgres -vlc"
 
 ENABLE_EXTENSIONS="presenter-console"
 DISABLE_EXTENSIONS="nlpsolver scripting-beanshell scripting-javascript wiki-publisher"
