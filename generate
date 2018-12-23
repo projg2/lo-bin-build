@@ -5,8 +5,8 @@
 #  * for amd64: CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
 
 # What you can set:
-VERSION="6.0.6.2"
-BINVERSION="6.0.6.2"
+VERSION="6.1.4.2"
+BINVERSION="6.1.4.2"
 
 ################################################
 
@@ -24,6 +24,9 @@ OPTS="-v"
 
 # bug 473974
 export LC_MESSAGES=C
+
+# make sure we're updated
+/root/lo-bin-build/run cleanup
 
 die() {
         echo "${1}"
@@ -168,3 +171,6 @@ rm -f ${USEFILE} || die "Removing ${USEFILE} failed"
 
 cd ${MYDISTDIR}
 ${BASEDIR}/manifest ${ARCH}-* > Manifest-${ARCH}.txt
+
+emerge --info > Info-${ARCH}.txt
+equery list '*' >> Info-${ARCH}.txt
