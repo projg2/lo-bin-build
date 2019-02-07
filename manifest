@@ -1,8 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/python3.6
 
 import hashlib
 from sys import argv
-from hashlib import sha256, sha512
+from hashlib import sha512, blake2b
 from os.path import basename, getsize
 
 def distline(file):
@@ -11,7 +11,7 @@ def distline(file):
 	f.close()
 	wp = hashlib.new("whirlpool")
 	wp.update(s)
-	return "DIST %s %s SHA256 %s SHA512 %s WHIRLPOOL %s" % (basename(file), getsize(file), sha256(s).hexdigest(), sha512(s).hexdigest(), wp.hexdigest())
+	return "DIST %s %s BLAKE2B %s SHA512 %s" % (basename(file), getsize(file), blake2b(s).hexdigest(), sha512(s).hexdigest())
 
 for arg in argv[1:]:
 	print (distline(arg))
