@@ -1,14 +1,16 @@
 # stabilization
 
-=app-office/libreoffice-6.1.4.2
-=app-office/libreoffice-l10n-6.1.4.2
+=app-office/libreoffice-6.1.5.2
+=app-office/libreoffice-l10n-6.1.5.2
 
 # stabilization of deps
 
-=app-text/libnumbertext-1.0.5
-=app-text/libodfgen-0.1.7
+=app-text/libetonyek-0.1.9
+=app-text/libqxp-0.0.2
+=app-text/libwpd-0.10.3
+=app-text/libwpg-0.3.3
+=dev-cpp/libcmis-0.5.2
+=media-libs/libcdr-0.1.5
+=media-gfx/graphite2-1.3.13
 
 # timed:
-
-=dev-libs/icu-63.1-r1
-=dev-libs/icu-layoutex-63.1
