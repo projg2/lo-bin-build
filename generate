@@ -42,7 +42,7 @@ else
 fi
 
 # first the default subset of useflags
-IUSES_BASE="branding cups dbus googledrive gstreamer gtk2 -accessibility -bluetooth -coinmp -debug -firebird -gltf -gtk -jemalloc -ldap -mariadb -odk -pdfimport -postgres -vlc"
+IUSES_BASE="branding cups dbus googledrive gstreamer gtk2 mariadb -accessibility -bluetooth -coinmp -debug -firebird -gltf -gtk -jemalloc -ldap -odk -pdfimport -postgres -vlc"
 
 ENABLE_EXTENSIONS="presenter-console"
 DISABLE_EXTENSIONS="nlpsolver scripting-beanshell scripting-javascript wiki-publisher"
