@@ -5,8 +5,8 @@
 #  * for amd64: CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
 
 # What you can set:
-VERSION="6.2.4.2"
-BINVERSION="6.2.4.2-r1"
+VERSION="6.2.5.2"
+BINVERSION="6.2.5.2"
 
 ################################################
 
@@ -26,7 +26,7 @@ OPTS="-v"
 export LC_MESSAGES=C
 
 # make sure we're updated
-/root/lo-bin-build/run cleanup
+/root/lo-bin-build/cleanup
 
 die() {
         echo "${1}"
