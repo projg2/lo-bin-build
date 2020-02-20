@@ -1,18 +1,5 @@
 # stabilization
 
-=app-office/libreoffice-6.3.4.2
-=app-office/libreoffice-l10n-6.3.4.2
-
 # stabilization of deps
 
-=app-text/libebook-0.1.3
-=app-text/liblangtag-0.6.3
-
 # simultaneous
-
-=app-text/poppler-0.84.0
-=dev-libs/boost-1.72.0
-=dev-util/boost-build-1.72.0
-=app-text/texlive-core-2019-r7
-=dev-libs/hyphen-2.8.8-r1
-=sci-libs/gdal-2.4.3
