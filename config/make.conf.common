@@ -10,6 +10,9 @@ MAKEOPTS="-j9"
 FEATURES="sandbox distlocks strict userfetch userpriv usersandbox splitdebug protect-owned compressdebug -news"
 
 VIDEO_CARDS="vesa"
-INPUT_DEVICES="keyboard mouse evdev"
+INPUT_DEVICES="libinput"
 
 EMERGE_DEFAULT_OPTS="-v --keep-going"
+
+PYTHON_SINGLE_TARGET="python3_7"
+PYTHON_TARGETS="python2_7 python3_7"
