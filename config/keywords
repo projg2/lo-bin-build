@@ -1,10 +1,5 @@
 # stabilization
 
-=app-office/libreoffice-6.4.6.2-r2
-=app-office/libreoffice-l10n-6.4.6.2
-
 # stabilization of deps
-
-=app-text/libnumbertext-1.0.6
 
 # simultaneous

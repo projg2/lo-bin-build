@@ -5,8 +5,8 @@
 #  * for amd64: CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
 
 # What you can set:
-VERSION="6.4.6.2-r2"
-BINVERSION="6.4.6.2-r2"
+VERSION="6.4.7.2"
+BINVERSION="6.4.7.2"
 
 ################################################
 
