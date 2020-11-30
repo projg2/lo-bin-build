@@ -10,3 +10,4 @@ dev-lang/python sqlite
 # dev-libs/openssl -bindist
 # net-misc/openssh -bindist
 sys-devel/llvm -doc
+app-crypt/gcr gtk
