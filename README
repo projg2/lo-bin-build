@@ -11,5 +11,6 @@ Installation:
 * symlink /root/lo-bin-build/config/useflags to /etc/portage/package.use/automatic
 * symlink /root/lo-bin-build/config/environment to /etc/portage/package.env/automatic
 * symlink /root/lo-bin-build/config/env to /etc/portage/env
+* set the profile to be the main desktop profile
 
 You should be able to figure out the rest for yourself.
