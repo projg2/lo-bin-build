@@ -7,3 +7,4 @@ dev-libs/xmlsec nss
 media-libs/gst-plugins-bad egl
 dev-lang/python sqlite -bluetooth
 sys-devel/llvm -doc
+app-crypt/pinentry gnome-keyring
