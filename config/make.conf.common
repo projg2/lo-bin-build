@@ -13,3 +13,5 @@ VIDEO_CARDS="vesa"
 INPUT_DEVICES="libinput"
 
 EMERGE_DEFAULT_OPTS="-v --keep-going"
+
+PORTAGE_COMPRESS=""
