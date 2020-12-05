@@ -6,7 +6,7 @@
 
 # What you can set:
 VERSION="6.4.7.2"
-BINVERSION="6.4.7.2-r1"
+BINVERSION="6.4.7.2_p1"
 
 ################################################
 
@@ -42,7 +42,7 @@ else
 fi
 
 # first the default subset of useflags
-IUSES_BASE="branding cups dbus googledrive gstreamer mariadb odk -accessibility -bluetooth -coinmp -debug -firebird -gltf -gtk2 -jemalloc -ldap -pdfimport -postgres"
+IUSES_BASE="branding cups dbus googledrive gstreamer mariadb odk -accessibility -base -bluetooth -coinmp -debug -firebird -gltf -gtk2 -jemalloc -ldap -pdfimport -postgres"
 
 ENABLE_EXTENSIONS="presenter-console"
 DISABLE_EXTENSIONS="nlpsolver scripting-beanshell scripting-javascript wiki-publisher"
@@ -56,8 +56,8 @@ done
 unset lo_xt
 
 # now for the options
-IUSES_J="java libreoffice_extensions_nlpsolver"
-IUSES_NJ="-java"
+IUSES_J="base java libreoffice_extensions_nlpsolver"
+IUSES_NJ="-java -base"
 IUSES_G="eds"
 IUSES_NG="-eds"
 IUSES_K="kde -gtk"
