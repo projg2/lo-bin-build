@@ -4,3 +4,4 @@ sys-devel/llvm noopt
 media-libs/alsa-lib noopt
 dev-libs/libaio noopt
 net-libs/webkit-gtk noopt
+dev-java/openjdk noopt
