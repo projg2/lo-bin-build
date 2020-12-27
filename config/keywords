@@ -2,4 +2,7 @@
 
 # stabilization of deps
 
+=dev-libs/icu-68.2
+=dev-libs/icu-layoutex-68.2
+
 # simultaneous
