@@ -2,7 +2,10 @@
 
 # stabilization of deps
 
-=dev-libs/icu-68.2
-=dev-libs/icu-layoutex-68.2
+=dev-libs/boost-1.75.0
+=dev-util/boost-build-1.75.0
+=app-text/libodfgen-0.1.8
+=app-text/libnumbertext-1.0.7
+=media-libs/harfbuzz-2.7.4
 
 # simultaneous
