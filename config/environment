@@ -5,3 +5,5 @@ media-libs/alsa-lib noopt
 dev-libs/libaio noopt
 net-libs/webkit-gtk noopt
 dev-java/openjdk noopt
+dev-libs/libbsd noopt
+sys-apps/sandbox noopt
