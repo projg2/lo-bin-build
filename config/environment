@@ -1,9 +1,9 @@
 net-libs/webkit-gtk nodebug
 
-sys-devel/llvm noopt
-media-libs/alsa-lib noopt
-dev-libs/libaio noopt
-net-libs/webkit-gtk noopt
 dev-java/openjdk noopt
+dev-libs/libaio noopt
 dev-libs/libbsd noopt
+media-libs/alsa-lib noopt
+net-libs/webkit-gtk noopt
 sys-apps/sandbox noopt
+sys-devel/llvm noopt
