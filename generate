@@ -56,7 +56,7 @@ done
 unset lo_xt
 
 # now for the options
-IUSES_J="base java libreoffice_extensions_nlpsolver"
+IUSES_J="-base java libreoffice_extensions_nlpsolver"
 IUSES_NJ="-java -base"
 IUSES_G="eds"
 IUSES_NG="-eds"
