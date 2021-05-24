@@ -15,3 +15,5 @@ INPUT_DEVICES="libinput"
 EMERGE_DEFAULT_OPTS="-v --keep-going"
 
 PORTAGE_COMPRESS=""
+
+PYTHON_SINGLE_TARGET="python3_9"
