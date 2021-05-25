@@ -8,6 +8,7 @@
 =app-text/poppler-21.05.0
 =dev-libs/boost-1.76.0-r1
 =dev-util/boost-build-1.76.0-r1
+=dev-util/boost-build-1.76.0-r2
 =dev-libs/icu-69.1
 =app-text/libmwaw-0.3.19
 =dev-libs/libixion-0.16.1
