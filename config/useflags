@@ -10,3 +10,5 @@ sys-devel/llvm -doc
 app-crypt/pinentry gnome-keyring
 
 dev-libs/libxml2 python_targets_python3_9
+
+dev-lang/rust cpu_flags_x86_sse2
