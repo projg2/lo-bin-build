@@ -1,21 +1,9 @@
 # stabilization
 
-=app-office/libreoffice-7.1.3.2
-=app-office/libreoffice-l10n-7.1.3.2
+=app-office/libreoffice-7.1.5.2
+=app-office/libreoffice-l10n-7.1.5.2
 
-=games-engines/box2d-2.4.1
-=app-text/libetonyek-0.1.10
-=app-text/poppler-21.05.0
-=dev-libs/boost-1.76.0-r1
-=dev-util/boost-build-1.76.0-r1
-=dev-util/boost-build-1.76.0-r2
-=dev-libs/icu-69.1
-=app-text/libmwaw-0.3.19
-=dev-libs/libixion-0.16.1
-=dev-libs/liborcus-0.16.1
-=media-libs/harfbuzz-2.8.1
-=media-libs/libcdr-0.1.7
-=sys-devel/ucpp-1.3.5
+=app-text/libmwaw-0.3.20
 
 # this is afaik only a build dependency
 
