@@ -1,7 +1,2 @@
 # stabilization
 
-# bug 835426
-=app-office/libreoffice-7.2.6.2
-=app-office/libreoffice-l10n-7.2.6.2
-=app-text/poppler-22.03.0
-=media-libs/harfbuzz-3.4.0-r1
