@@ -1,20 +1,6 @@
 # stabilization
-=app-office/libreoffice-7.3.3.2-r3
-=app-office/libreoffice-l10n-7.3.3.2
+=app-office/libreoffice-7.3.4.2
+=app-office/libreoffice-l10n-7.3.4.2
 
 # stabilization of deps
-=app-text/libnumbertext-1.0.10
-=app-text/libetonyek-0.1.10-r1
-=dev-util/mdds-2.0.3
-=dev-libs/libixion-0.17.0
-=dev-libs/liborcus-0.17.2
-=media-libs/harfbuzz-4.2.1
-
-# parallel stabilization
-=app-text/poppler-22.05.0
-=dev-libs/boost-1.79.0
-=dev-util/boost-build-1.79.0
-=dev-libs/icu-71.1-r1
-=dev-libs/icu-layoutex-71.1
-=app-crypt/gpgme-1.17.1
-=net-libs/gnutls-3.7.5
+=media-libs/harfbuzz-4.4.1
