@@ -1,6 +1,8 @@
 # stabilization
-=app-office/libreoffice-7.3.4.2
-=app-office/libreoffice-l10n-7.3.4.2
+=app-office/libreoffice-7.3.6.2
+=app-office/libreoffice-l10n-7.3.6.2
 
 # stabilization of deps
-=media-libs/harfbuzz-4.4.1
+=app-text/liblangtag-0.6.4
+=app-text/mythes-1.2.5
+=media-libs/zxing-cpp-1.4.0
