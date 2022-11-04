@@ -1,8 +1,10 @@
-# stabilization
-=app-office/libreoffice-7.3.6.2
-=app-office/libreoffice-l10n-7.3.6.2
 
-# stabilization of deps
-=app-text/liblangtag-0.6.4
-=app-text/mythes-1.2.5
-=media-libs/zxing-cpp-1.4.0
+=app-office/libreoffice-7.3.7.2
+=app-office/libreoffice-l10n-7.3.7.2
+
+=app-text/poppler-22.11.0
+=dev-libs/boost-1.80.0
+=dev-util/b2-4.9.2
+=dev-libs/icu-72.1
+=sec-keys/openpgp-keys-icu-20221020
+=dev-libs/icu-layoutex-72.1
