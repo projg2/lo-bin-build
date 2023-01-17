@@ -7,7 +7,7 @@ PKGDIR="/root/lo-bin-build/packages"
 PORTAGE_NICENESS="1"
 MAKEOPTS="-j17"
 
-FEATURES="sandbox distlocks strict userfetch userpriv usersandbox splitdebug protect-owned compressdebug -news"
+FEATURES="sandbox distlocks strict userfetch userpriv usersandbox splitdebug protect-owned compressdebug -news -binpkg-multi-instance"
 
 VIDEO_CARDS="vesa"
 INPUT_DEVICES="libinput"
