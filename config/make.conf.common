@@ -8,6 +8,8 @@ PORTAGE_NICENESS="1"
 MAKEOPTS="-j17"
 
 FEATURES="sandbox distlocks strict userfetch userpriv usersandbox splitdebug protect-owned compressdebug -news -binpkg-multi-instance"
+BINPKG_COMPRESS="bzip2"
+BINPKG_FORMAT="xpak"
 
 VIDEO_CARDS="vesa"
 INPUT_DEVICES="libinput"
