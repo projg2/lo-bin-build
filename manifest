@@ -9,8 +9,6 @@ def distline(file):
 	f = open(file, "br")
 	s = f.read()
 	f.close()
-	wp = hashlib.new("whirlpool")
-	wp.update(s)
 	return "DIST %s %s BLAKE2B %s SHA512 %s" % (basename(file), getsize(file), blake2b(s).hexdigest(), sha512(s).hexdigest())
 
 for arg in argv[1:]:
