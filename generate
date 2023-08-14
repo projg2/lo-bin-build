@@ -74,47 +74,44 @@ if [ -z "${MYPKGDIR}" -o ! -d "${MYPKGDIR}" ] ; then
 	die "Anything goes wrong"
 fi
 
+# compile the flavor
 echo "Base"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_NG} ${IUSES_NK}" > ${USEFILE}
 emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-${BINVERSION}.tbz2  || die "Moving package failed"
 
-if [ ${ARCH} = "amd64" ]; then
-	echo "Base - java"
-	echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_NK}" > ${USEFILE}
-	emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
-	quickpkg libreoffice --include-config=y
-	mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-java-${BINVERSION}.tbz2  || die "Moving package failed"
-fi
+echo "Base - java"
+echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_NK}" > ${USEFILE}
+emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
+quickpkg libreoffice --include-config=y
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
+# kde flavor
 echo "KDE"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_NG} ${IUSES_K}" > ${USEFILE}
 emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-kde-${BINVERSION}.tbz2  || die "Moving package failed"
 
-if [ ${ARCH} = "amd64" ]; then
-	echo "KDE - java"
-	echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_K}" > ${USEFILE}
-	emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
-	quickpkg libreoffice --include-config=y
-	mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-kde-java-${BINVERSION}.tbz2  || die "Moving package failed"
-fi
+echo "KDE - java"
+echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_K}" > ${USEFILE}
+emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
+quickpkg libreoffice --include-config=y
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-kde-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
+# gnome flavor
 echo "Gnome"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_G} ${IUSES_NK}" > ${USEFILE}
 emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-gnome-${BINVERSION}.tbz2  || die "Moving package failed"
 
-if [ ${ARCH} = "amd64" ]; then
-	echo "Gnome -java"
-	echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_G} ${IUSES_NK}" > ${USEFILE}
-	emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
-	quickpkg libreoffice --include-config=y
-	mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-gnome-java-${BINVERSION}.tbz2  || die "Moving package failed"
-fi
+echo "Gnome -java"
+echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_G} ${IUSES_NK}" > ${USEFILE}
+emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
+quickpkg libreoffice --include-config=y
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-gnome-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
 cd ${MYTMPDIR}
 
@@ -155,16 +152,12 @@ cd ${MYTMPDIR}
 
 for package in bin debug ; do
 
- for suffix in java kde kde-java gnome gnome-java ; do
+ for suffix in java kde kde-java gnome gnome-java ; do 
 
-  if [ ${ARCH} = "amd64" ] || [ ! ${suffix} = *java ] ; then
-
-    echo "Generating binary diffs"
-    xdelta3 -9 -s ${ARCH}-${package}-libreoffice-${BINVERSION}.tar ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.xd3
-    rm ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar
-    mv -v $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.xd3 $MYDISTDIR
-
- fi
+  echo "Generating binary diffs"
+  xdelta3 -s ${ARCH}-${package}-libreoffice-${BINVERSION}.tar ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.xd3
+  rm ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar
+  mv -v $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.xd3 $MYDISTDIR
 
  done
 
