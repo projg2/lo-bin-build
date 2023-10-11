@@ -1,9 +1,9 @@
+# stabilization
+=app-office/libreoffice-7.5.6.2
+=app-office/libreoffice-l10n-7.5.6.2
 
-=app-office/libreoffice-7.5.5.2
-=app-office/libreoffice-l10n-7.5.5.2
-=app-crypt/gpgme-1.21.0
-=app-text/poppler-23.08.0
-=app-text/poppler-data-0.4.12
-=dev-libs/icu-73.2
-=dev-libs/icu-layoutex-73.2
-=media-libs/harfbuzz-8.0.1
+# stabilization of deps
+=app-crypt/gpgme-1.22.0 
+=app-text/poppler-23.09.0 
+=sec-keys/openpgp-keys-aacid-20230907 
+=media-libs/harfbuzz-8.2.0
