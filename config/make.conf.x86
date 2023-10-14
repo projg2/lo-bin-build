@@ -2,7 +2,11 @@
 # Please consult http://www.gentoo.org/doc/en/change-chost.xml before changing.
 CHOST="i686-pc-linux-gnu"
 
-CFLAGS="-march=i686 -mtune=generic -O2 -pipe -g0"
+# sse2 is needed by a lot of stuff, e.g., rust
+
+CFLAGS="-march=i686 -mtune=generic -msse2 -O2 -pipe -g0"
 CXXFLAGS="${CFLAGS}"
 
 source /root/lo-bin-build/config/make.conf.common
+
+CPU_FLAGS_X86="sse2"
