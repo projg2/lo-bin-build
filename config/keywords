@@ -2,8 +2,15 @@
 =app-office/libreoffice-7.5.6.2
 =app-office/libreoffice-l10n-7.5.6.2
 
+=app-office/libreoffice-7.5.7.1
+=app-office/libreoffice-l10n-7.5.7.1
+
 # stabilization of deps
 =app-crypt/gpgme-1.22.0 
 =app-text/poppler-23.09.0 
 =sec-keys/openpgp-keys-aacid-20230907 
 =media-libs/harfbuzz-8.2.0
+
+=app-text/poppler-23.10.0
+=dev-libs/boost-1.83.0-r2
+=media-libs/harfbuzz-8.2.1
