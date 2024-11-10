@@ -1,2 +1,7 @@
 # stabilization
 
+=app-office/libreoffice-24.2.7.2
+=app-office/libreoffice-l10n-24.2.7.2
+=app-text/poppler-24.10.0
+=dev-libs/icu-75.1
+=media-libs/harfbuzz-10.1.0
