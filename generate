@@ -81,11 +81,13 @@ emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-${BINVERSION}.tbz2  || die "Moving package failed"
 
+if [ "$( uname -m )" = "x86_64" ] ; then
 echo "Base - java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_NK}" > ${USEFILE}
 emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-java-${BINVERSION}.tbz2  || die "Moving package failed"
+fi
 
 # kde flavor
 echo "KDE"
@@ -94,11 +96,13 @@ emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-kde-${BINVERSION}.tbz2  || die "Moving package failed"
 
+if [ "$( uname -m )" = "x86_64" ] ; then
 echo "KDE - java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_K}" > ${USEFILE}
 emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-kde-java-${BINVERSION}.tbz2  || die "Moving package failed"
+fi
 
 # gnome flavor
 echo "Gnome"
@@ -107,11 +111,13 @@ emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-gnome-${BINVERSION}.tbz2  || die "Moving package failed"
 
+if [ "$( uname -m )" = "x86_64" ] ; then
 echo "Gnome -java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_G} ${IUSES_NK}" > ${USEFILE}
 emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
 mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-gnome-java-${BINVERSION}.tbz2  || die "Moving package failed"
+fi
 
 cd ${MYTMPDIR}
 
@@ -152,7 +158,11 @@ cd ${MYTMPDIR}
 
 for package in bin debug ; do
 
- for suffix in java kde kde-java gnome gnome-java ; do 
+ mysuffixes="kde gnome"
+ if [ "$( uname -m )" = "x86_64" ] ; then
+   mysuffixes="${mysuffixes} java kde-java gnome-java"
+ fi
+ for suffix in ${mysuffixes} ; do
 
   echo "Generating binary diffs"
   xdelta3 -s ${ARCH}-${package}-libreoffice-${BINVERSION}.tar ${ARCH}-${package}-libreoffice-${suffix}-${BINVERSION}.tar $ARCH-${package}-libreoffice-${suffix}-${BINVERSION}.xd3
